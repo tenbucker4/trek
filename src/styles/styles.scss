@@ -1,0 +1,16 @@
+@import "./_auth", "./_header", "./_main-feed";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+#root {
+    position: relative;
+}
+
+button {
+    cursor: pointer;
+}
