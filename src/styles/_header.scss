@@ -11,6 +11,7 @@ header {
     width: 100%;
     background-color: white;
     border-bottom: 1px solid $border-grey;
+    z-index: 10;
 
     .header-app-title {
         display: flex;
@@ -70,4 +71,14 @@ header {
         }
     }
 
+}
+
+@media (max-width: 575px) {
+    header {
+        justify-content: space-between;
+
+        input {
+            display: none;
+        }
+    }
 }

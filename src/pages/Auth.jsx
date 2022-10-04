@@ -87,7 +87,7 @@ const Auth = () => {
 					<Icon path={mdiImageFilterHdr}
 					title="User Profile"
 					size={4}
-					color="green"/>
+					color="rgb(54, 159, 89)"/>
 				</div>
 				<h3>Share your outdoor adventures with your network.</h3>
 			</div>

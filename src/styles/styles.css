@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
 }
 .auth-page .app-header {
   padding-left: 10vw;
@@ -141,6 +142,7 @@ header {
   width: 100%;
   background-color: white;
   border-bottom: 1px solid rgb(206, 206, 206);
+  z-index: 10;
 }
 header .header-app-title {
   display: flex;
@@ -193,6 +195,14 @@ header input:focus {
   border: none;
 }
 
+@media (max-width: 575px) {
+  header {
+    justify-content: space-between;
+  }
+  header input {
+    display: none;
+  }
+}
 main {
   background-color: #f0f5f3;
   min-height: 100vh;
@@ -257,6 +267,15 @@ main .aside-container .user-bio {
   margin-bottom: 1rem;
 }
 
+@media (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  main aside {
+    padding: 1rem 1rem 0 1rem;
+  }
+}
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
