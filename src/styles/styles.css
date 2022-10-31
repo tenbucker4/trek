@@ -14,6 +14,11 @@
     --off-white: #f0f5f3;
     --text-grey: #626262;
     --border-grey: rgb(206, 206, 206);
+    background-color: var(--off-white);
+}
+
+body {
+    min-height: 100vh;
 }
 
 button {
@@ -42,78 +47,4 @@ p {
 
 .small {
     font-size: 12px;
-}
-main {
-    background-color: #f0f5f3;
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    margin-top: 50px;
-}
-main .feed {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-main .feed .new-post-container,
-main .feed .post {
-    background-color: white;
-    border: 1px solid rgb(206, 206, 206);
-    border-radius: 5px;
-}
-main .feed .new-post-container {
-    height: 150px;
-}
-main .feed .post {
-    height: 300px;
-}
-main aside {
-    padding: 1rem 1rem 1rem 0rem;
-}
-main .aside-container {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid rgb(206, 206, 206);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
-}
-main .aside-container .aside-background {
-    height: 50px;
-    background-color: rgba(54, 159, 89, 0.7);
-}
-main .aside-container .profile-picture {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #f0f5f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-main .aside-container .user-profile {
-    margin-top: 35px;
-    align-self: center;
-}
-main .aside-container .user-bio {
-    font-size: 12px;
-    padding: 0.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-@media (max-width: 700px) {
-    main {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    main aside {
-        padding: 1rem 1rem 0 1rem;
-    }
 }

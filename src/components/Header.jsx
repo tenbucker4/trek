@@ -25,39 +25,38 @@ const Header = () => {
 
   	return (
 		<header>
-			<div className='header-app-title'>
-				<Icon path={mdiImageFilterHdr}
-				title="User Profile"
-				size={2}
-				color="rgb(54, 159, 89)"/>
+			<div className='header-container'>
+				<div className='header-app-title'>
+					<Icon path={mdiImageFilterHdr}
+					title="User Profile"
+					size={2}
+					color="rgb(54, 159, 89)"/>
+				</div>
+				<div className='search-bar'>
+				<input placeholder='Search' type="text"></input>
+				</div>
+				<ul className='nav-links'>
+					<li className='nav-link'>
+						<Icon path={mdiHome}
+						size={1}
+						color="grey"/>
+						<p className='small grey nav-link-description'>Home</p>
+					</li>
+					<li className='nav-link'>
+						<Icon path={mdiMessageReplyText}
+						size={1}
+						color="grey"/>
+						<p className='small grey nav-link-description'>Messages</p>
+					</li>
+					<li className='nav-link'>
+						<Icon path={mdiAccount}
+						size={1}
+						color="grey"/>
+						<p className='small grey nav-link-description'>Profile</p>
+					</li>
+					<button onClick={handleSignOut}>Log Out</button>
+				</ul>
 			</div>
-			<div className='search-bar'>
-			<input placeholder='Search' type="text"></input>
-			</div>
-			<ul className='nav-links'>
-				<li className='nav-link'>
-					<Icon path={mdiHome}
-					title="User Profile"
-					size={1}
-					color="grey"/>
-					<p className='small grey'>Home</p>
-				</li>
-				<li className='nav-link'>
-					<Icon path={mdiMessageReplyText}
-					title="User Profile"
-					size={1}
-					color="grey"/>
-					<p className='small grey'>Messages</p>
-				</li>
-				<li className='nav-link'>
-					<Icon path={mdiAccount}
-					title="User Profile"
-					size={1}
-					color="grey"/>
-					<p className='small grey'>Profile</p>
-				</li>
-				<button onClick={handleSignOut}>Log Out</button>
-			</ul>
 		</header>
   	)
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from '@mdi/react'
 import { mdiAccount } from '@mdi/js';
+import "../styles/feed.css";
 
 const Feed = () => {
     
