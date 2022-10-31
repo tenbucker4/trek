@@ -9,6 +9,7 @@ import { auth, db } from '../auth/firebase';
 import { signOut } from "firebase/auth";
 import { getDoc, updateDoc, doc } from "firebase/firestore";
 import { useNavigate } from 'react-router-dom';
+import "../styles/header.css";
 
 const Header = () => {
 	const navigate = useNavigate();
@@ -39,21 +40,21 @@ const Header = () => {
 					title="User Profile"
 					size={1}
 					color="grey"/>
-					<p>Home</p>
+					<p className='small grey'>Home</p>
 				</li>
 				<li className='nav-link'>
 					<Icon path={mdiMessageReplyText}
 					title="User Profile"
 					size={1}
 					color="grey"/>
-					<p>Messages</p>
+					<p className='small grey'>Messages</p>
 				</li>
 				<li className='nav-link'>
 					<Icon path={mdiAccount}
 					title="User Profile"
 					size={1}
 					color="grey"/>
-					<p>Profile</p>
+					<p className='small grey'>Profile</p>
 				</li>
 				<button onClick={handleSignOut}>Log Out</button>
 			</ul>

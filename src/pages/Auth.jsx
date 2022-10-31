@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "fire
 import { setDoc, updateDoc, doc, Timestamp } from "firebase/firestore"
 import { auth, db} from '../auth/firebase';
 import { mdiImageFilterHdr } from '@mdi/js';
+import "../styles/auth.css"
 
 const Auth = () => {
 	const navigate = useNavigate();
@@ -90,7 +91,7 @@ const Auth = () => {
 						size={4}
 						color="rgb(54, 159, 89)"/>
 					</div>
-					<h3 className='grey'>Share your outdoor adventures with your network.</h3>
+					<p className='thin'>Share your outdoor adventures with your network.</p>
 				</div>
 				<div className='auth-form-container'>
 					<div className='auth-form'>
