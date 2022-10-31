@@ -88,7 +88,7 @@ const Auth = () => {
 						<div className='green'>Trek</div>
 						<Icon path={mdiImageFilterHdr}
 						title="User Profile"
-						size={4}
+						size={3}
 						color="rgb(54, 159, 89)"/>
 					</div>
 					<p className='thin'>Share your outdoor adventures with your network.</p>
@@ -134,8 +134,8 @@ const Auth = () => {
 								</>
 							}
 						</form>
-						{isSignUp? <p className='auth-footer'>Already have an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign In</span></p>
-						: <p className='auth-footer'>Need an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign Up</span></p>}
+						{isSignUp? <p className='auth-footer p-smaller-text'>Already have an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign In</span></p>
+						: <p className='auth-footer p-smaller-text'>Need an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign Up</span></p>}
 					</div>
 				</div>
 			</div>

@@ -8,6 +8,7 @@
 
 .auth-container {
     display: flex;
+    align-items: center;
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto;
@@ -108,6 +109,7 @@ form button:hover {
 .app-title {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .app-title div {
@@ -115,30 +117,33 @@ form button:hover {
     font-weight: 400;
 }
 
-.app-title h3 {
-    font-weight: 300;
-}
-
-@media (max-width: 875px) {
-    .auth-page {
+@media (max-width: 900px) {
+    .auth-container {
         flex-direction: column;
         gap: 2rem;
     }
+
+    form {
+        width: 100%;
+    }
+
     .app-header,
     .auth-form-container {
         width: 95%;
         max-width: 500px;
         padding: 0;
+        align-self: center;
+    }
+
+    .app-header {
+        padding: 0 0.5rem;
+        text-align: center;
     }
 
     .app-header {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    .app-header h3 {
-        text-align: center;
     }
 
     .auth-form {
