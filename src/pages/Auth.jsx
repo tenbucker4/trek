@@ -81,59 +81,61 @@ const Auth = () => {
 
   	return (
 		<div className='auth-page'>
-			<div className='app-header'>
-				<div className='app-title'>
-					<div>Trek</div>
-					<Icon path={mdiImageFilterHdr}
-					title="User Profile"
-					size={4}
-					color="rgb(54, 159, 89)"/>
+			<div className="auth-container">
+				<div className='app-header'>
+					<div className='app-title'>
+						<div className='green'>Trek</div>
+						<Icon path={mdiImageFilterHdr}
+						title="User Profile"
+						size={4}
+						color="rgb(54, 159, 89)"/>
+					</div>
+					<h3 className='grey'>Share your outdoor adventures with your network.</h3>
 				</div>
-				<h3>Share your outdoor adventures with your network.</h3>
-			</div>
-			<div className='auth-form-container'>
-				<div className='auth-form'>
-					<form onSubmit={handleSubmit} autoComplete="off">
-						{isSignUp? 
-							<>
-								<div className='form-entry'>
-									<input name="name" className="form-input" id="name" placeholder=' ' type="text" defaultValue={name} onChange={handleChange} />
-									<label className="form-label" htmlFor="name">Name</label>
-								</div>
-								<div className='form-entry'>
-									<input placeholder=' ' name="email" className="form-input" id="email" type="email" defaultValue={email} onChange={handleChange}/>
-									<label className="form-label" htmlFor="email">Email</label>
-								</div>
-								<div className='form-entry'>
-									<input name="password" className='form-input' placeholder=' ' type="password" id="password" defaultValue={password} onChange={handleChange}/>
-									<label className='form-label' htmlFor="password">Password</label>
-								</div>
-								<div className='form-entry'>
-									<input name="confirmPassword" className='form-input' id="confirmPassword" placeholder=' ' type="password" defaultValue={confirmPassword} onChange={handleChange}/>
-									<label className='form-label' htmlFor="confirmPassword">Confirm Password</label>
-								</div>
-								{error? <p style={{ color: "black", fontSize: "12px" }}>{error}</p> : null}
-                  				{loading? <p style={{ color: "black", fontSize: "12px" }}>Processing...</p> : null}
-								<button type='submit'>Register</button>
-							</>
-							: 
-							<>
-								<div className='form-entry'>
-									<input name="email" placeholder=' ' className="form-input" id="email" type="email" defaultValue={email} onChange={handleChange}/>
-									<label className="form-label" htmlFor="email">Email</label>
-								</div>
-								<div className='form-entry'>
-									<input name="password" className='form-input' placeholder=' ' type="password" id="password" defaultValue={password} onChange={handleChange}/>
-									<label className='form-label' htmlFor="password">Password</label>
-								</div>
-								{error? <p style={{ color: "black", fontSize: "12px" }}>{error}</p> : null}
-                  				{loading? <p style={{ color: "black", fontSize: "12px" }}>Processing...</p> : null}
-								<button type='submit'>Log In</button>
-							</>
-						}
-					</form>
-					{isSignUp? <p className='auth-footer'>Already have an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign In</span></p>
-					 : <p className='auth-footer'>Need an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign Up</span></p>}
+				<div className='auth-form-container'>
+					<div className='auth-form'>
+						<form onSubmit={handleSubmit} autoComplete="off">
+							{isSignUp? 
+								<>
+									<div className='form-entry'>
+										<input name="name" className="form-input" id="name" placeholder=' ' type="text" defaultValue={name} onChange={handleChange} />
+										<label className="form-label" htmlFor="name">Name</label>
+									</div>
+									<div className='form-entry'>
+										<input placeholder=' ' name="email" className="form-input" id="email" type="email" defaultValue={email} onChange={handleChange}/>
+										<label className="form-label" htmlFor="email">Email</label>
+									</div>
+									<div className='form-entry'>
+										<input name="password" className='form-input' placeholder=' ' type="password" id="password" defaultValue={password} onChange={handleChange}/>
+										<label className='form-label' htmlFor="password">Password</label>
+									</div>
+									<div className='form-entry'>
+										<input name="confirmPassword" className='form-input' id="confirmPassword" placeholder=' ' type="password" defaultValue={confirmPassword} onChange={handleChange}/>
+										<label className='form-label' htmlFor="confirmPassword">Confirm Password</label>
+									</div>
+									{error? <p style={{ color: "black", fontSize: "12px" }}>{error}</p> : null}
+									{loading? <p style={{ color: "black", fontSize: "12px" }}>Processing...</p> : null}
+									<button type='submit'>Register</button>
+								</>
+								: 
+								<>
+									<div className='form-entry'>
+										<input name="email" placeholder=' ' className="form-input" id="email" type="email" defaultValue={email} onChange={handleChange}/>
+										<label className="form-label" htmlFor="email">Email</label>
+									</div>
+									<div className='form-entry'>
+										<input name="password" className='form-input' placeholder=' ' type="password" id="password" defaultValue={password} onChange={handleChange}/>
+										<label className='form-label' htmlFor="password">Password</label>
+									</div>
+									{error? <p style={{ color: "black", fontSize: "12px" }}>{error}</p> : null}
+									{loading? <p style={{ color: "black", fontSize: "12px" }}>Processing...</p> : null}
+									<button type='submit'>Log In</button>
+								</>
+							}
+						</form>
+						{isSignUp? <p className='auth-footer'>Already have an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign In</span></p>
+						: <p className='auth-footer'>Need an account? <span onClick={() => setIsSignUp(prev => !prev)}>Sign Up</span></p>}
+					</div>
 				</div>
 			</div>
 		</div>
