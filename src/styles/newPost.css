@@ -1,0 +1,42 @@
+.new-post-container {
+    display: flex;
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+.new-post-left .avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.new-post-right {
+    flex-grow: 1;
+}
+
+.new-post-right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.new-post-right form textarea {
+    resize: none;
+    width: 100%;
+}
+
+.new-post-right form textarea,
+.new-post-right form button {
+    border-radius: 5px;
+}
+
+.new-post-right form button {
+    border: none;
+    background-color: var(--main-green);
+    color: white;
+    height: 2rem;
+    align-self: flex-end;
+    padding: 0.5rem;
+}
