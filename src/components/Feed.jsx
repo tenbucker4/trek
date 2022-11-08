@@ -1,4 +1,5 @@
 import React from 'react'
+import NewPost from './NewPost';
 import Icon from '@mdi/react'
 import { mdiAccount } from '@mdi/js';
 import "../styles/feed.css";
@@ -8,8 +9,7 @@ const Feed = () => {
 	return (
 		<main>
 			<div className='feed'>
-				<div className='new-post-container'></div>
-				<div className='post'></div>
+				<NewPost />
 				<div className='post'></div>
 				<div className='post'></div>
 				<div className='post'></div>
