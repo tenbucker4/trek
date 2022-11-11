@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/newPost.css"
 
-const NewPost = () => {
+const NewPost = ({ post, setPost, postImg, setPostImg }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
     }
