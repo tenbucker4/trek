@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react'
-import AuthContext from "../auth/AuthContext"
+import { AuthContext } from "../auth/AuthContext"
 import { db, auth, storage } from "../auth/firebase"
 import { collection, query, where, onSnapshot, addDoc, Timestamp, orderBy, setDoc, doc, getDoc, updateDoc } from 'firebase/firestore';
 import NewPost from './NewPost';
@@ -8,7 +8,7 @@ import { mdiAccount } from '@mdi/js';
 import "../styles/feed.css";
 
 const Feed = () => {
-	const user = useContext(AuthContext);
+	const { user } = useContext(AuthContext);
 	console.log(user);
 
 	const [post, setPost] = useState("");
@@ -27,9 +27,9 @@ const Feed = () => {
 	//   })
 
 
-	// const currentUser = auth?.currentUser?.uid;
+	// const user = auth?.currentUser?.uid;
 
-	// console.log(currentUser);
+	// console.log(user);
     
 	return (
 		<main>
