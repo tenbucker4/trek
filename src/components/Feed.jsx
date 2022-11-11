@@ -9,22 +9,18 @@ import "../styles/feed.css";
 
 const Feed = () => {
 	const { user } = useContext(AuthContext);
-	console.log(user);
 
 	const [post, setPost] = useState("");
 	const [postImg, setPostImg] = useState();
 	const [profile, setProfile] = useState("");
 
-	// useEffect(() => {
-	// 	if (user) {
-	// 	  getDoc(doc(db, "users", auth?.currentUser?.uid)).then(docSnap => {
-	// 	  if (docSnap.exists) {
-	// 		setProfile(docSnap.data());
-	// 		console.log("update")
-	// 	  }
-	// 	})
-	// 	}
-	//   })
+	useEffect(() => {
+		getDoc(doc(db, "users", auth?.currentUser?.uid)).then(docSnap => {
+		if (docSnap.exists) {
+			setProfile(docSnap.data());
+			}
+		})
+	  }, [user])
 
 
 	// const user = auth?.currentUser?.uid;
